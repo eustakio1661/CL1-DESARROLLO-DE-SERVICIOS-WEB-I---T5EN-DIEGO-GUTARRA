@@ -1,0 +1,89 @@
+﻿@model DSW1_EL1_GUTARRA_DIEGO.Entity.Empleado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="text-center">DETALLE DEL EMPLEADO</h2>
+
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apeEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apeEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecNac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecNac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dirEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dirEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idDistrito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idDistrito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fonoEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fonoEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idCargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecContrata)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecContrata)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Volver", "MantenimientoEmpleado")
+</p>

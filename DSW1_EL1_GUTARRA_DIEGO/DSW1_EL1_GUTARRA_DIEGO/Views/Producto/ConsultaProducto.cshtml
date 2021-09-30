@@ -1,0 +1,78 @@
+﻿@model IEnumerable<DSW1_EL1_GUTARRA_DIEGO.Entity.Producto>
+
+@{
+    ViewBag.Title = "ConsultaProducto";
+}
+
+<h2 class="text-center">Buscar productos</h2>
+
+@using (Html.BeginForm())
+
+{
+    <div class="form-inline">
+        <p>Nombre Producto</p>
+        <input name="producto" placeholder="Ingresar producto" class="form-control" />
+        @Html.DropDownList("IdCategoria", (SelectList)ViewBag.categorias, "Selecciona Categoria", new { @class = "form-control" })
+        <button type="submit" class="btn btn-primary">Consulta</button>
+
+    </div>
+    <br />
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdCategoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdProveedor)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.CantUnidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioUnidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stock)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.IdProducto)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.nomProducto)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IdCategoria)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IdProveedor)
+
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.CantUnidad)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PrecioUnidad)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.stock)
+    </td>
+    
+</tr>
+    }
+
+</table>

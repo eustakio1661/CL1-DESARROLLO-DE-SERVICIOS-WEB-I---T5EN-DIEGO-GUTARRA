@@ -1,0 +1,96 @@
+﻿@model DSW1_EL1_GUTARRA_DIEGO.Entity.Empleado
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2 class="text-center">CONFIRMACION DE BAJA DE EMPLEADO</h2>
+
+<h3 class="text-center">Estas seguro de dar de baja al Empleado => @Model.nomEmpleado ?</h3>
+<div>
+    <h4 class="text-center">Datos del empleado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apeEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apeEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecNac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecNac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dirEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dirEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idDistrito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idDistrito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fonoEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fonoEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idCargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecContrata)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecContrata)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Dar de Baja" class="btn btn-danger" /> |
+            @Html.ActionLink("Volver", "MantenimientoEmpleado")
+        </div>
+    }
+</div>
